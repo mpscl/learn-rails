@@ -13,6 +13,8 @@ LearnRails::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  #post 'contact', to: 'contacts#process_form'
+  resources :contacts, only: [:new, :create]
   root to: 'visitors#new'
   # Example resource route with options:
   #   resources :products do

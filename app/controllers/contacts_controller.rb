@@ -24,6 +24,7 @@ class ContactsController < ApplicationController
 			@contact.update_spreadsheet
 			# TODO save data
 			# TODO send message
+			UserMailer.contact_email(@contact).deliver
 			Rails.logger.debug "DEBUG: params are #{params}"
 			flash[:notice] = "Message sent from #{@contact.name}."
 			redirect_to root_path

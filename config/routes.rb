@@ -15,6 +15,7 @@ LearnRails::Application.routes.draw do
   #   resources :products
   #post 'contact', to: 'contacts#process_form'
   resources :contacts, only: [:new, :create]
+  resources :visitors, only: [:new, :create]
   root to: 'visitors#new'
   # Example resource route with options:
   #   resources :products do
